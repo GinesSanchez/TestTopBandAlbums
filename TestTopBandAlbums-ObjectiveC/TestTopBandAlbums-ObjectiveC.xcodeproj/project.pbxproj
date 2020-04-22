@@ -15,6 +15,7 @@
 		7508DC8124501CFB00C38529 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7508DC7F24501CFB00C38529 /* LaunchScreen.storyboard */; };
 		7508DC8424501CFB00C38529 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7508DC8324501CFB00C38529 /* main.m */; };
 		7508DC8E24501CFC00C38529 /* TestTopBandAlbums_ObjectiveCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7508DC8D24501CFC00C38529 /* TestTopBandAlbums_ObjectiveCTests.m */; };
+		7508DCA124501E0500C38529 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7508DCA024501E0500C38529 /* NetworkManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		7508DC8924501CFC00C38529 /* TestTopBandAlbums-ObjectiveCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TestTopBandAlbums-ObjectiveCTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7508DC8D24501CFC00C38529 /* TestTopBandAlbums_ObjectiveCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTopBandAlbums_ObjectiveCTests.m; sourceTree = "<group>"; };
 		7508DC8F24501CFC00C38529 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7508DC9F24501E0500C38529 /* NetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
+		7508DCA024501E0500C38529 /* NetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +116,7 @@
 		7508DC9924501D8C00C38529 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				7508DC9D24501DED00C38529 /* Managers */,
 				7508DC9B24501DBA00C38529 /* Views */,
 				7508DC9A24501D9300C38529 /* AppAndSceneDelegate */,
 			);
@@ -146,6 +150,23 @@
 				7508DC7A24501CFA00C38529 /* Main.storyboard */,
 			);
 			path = Default;
+			sourceTree = "<group>";
+		};
+		7508DC9D24501DED00C38529 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				7508DC9E24501DF500C38529 /* NetworkManager */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		7508DC9E24501DF500C38529 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				7508DC9F24501E0500C38529 /* NetworkManager.h */,
+				7508DCA024501E0500C38529 /* NetworkManager.m */,
+			);
+			path = NetworkManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +272,7 @@
 				7508DC7924501CFA00C38529 /* ViewController.m in Sources */,
 				7508DC7324501CFA00C38529 /* AppDelegate.m in Sources */,
 				7508DC8424501CFB00C38529 /* main.m in Sources */,
+				7508DCA124501E0500C38529 /* NetworkManager.m in Sources */,
 				7508DC7624501CFA00C38529 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
