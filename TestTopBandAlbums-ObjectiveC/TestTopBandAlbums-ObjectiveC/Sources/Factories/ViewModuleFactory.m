@@ -12,7 +12,7 @@
 @implementation ViewModuleFactory
 
 -(TopAlbumListViewController *) createTopAlbumListModule {
-    TopAlbumsListViewModel *viewModel = [[TopAlbumsListViewModel alloc] initWithAlbumManager: [AlbumManager new]];
+    TopAlbumsListViewModel *viewModel = [[TopAlbumsListViewModel alloc] initWithAlbumManager: [[AlbumManager alloc] initWithNetworkManager]];
     TopAlbumListViewController * viewController = [[TopAlbumListViewController alloc]initWithNibName: @"TopAlbumListViewController" bundle:nil];
     viewController.viewModel = viewModel;
     return viewController;

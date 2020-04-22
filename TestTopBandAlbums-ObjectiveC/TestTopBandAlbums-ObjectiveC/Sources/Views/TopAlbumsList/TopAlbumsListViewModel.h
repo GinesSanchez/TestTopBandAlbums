@@ -12,6 +12,22 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef NS_ENUM(NSInteger, ViewModelEvent) {
+    init,
+    viewDidLoad,
+    didGetEmptyArray,
+    didGetArray,
+    didGetError
+};
+
+typedef NS_ENUM(NSInteger, ViewModelState) {
+    initialized,
+    empty,
+    loading,
+    ready,
+    stateError
+};
+
 @protocol TopAlbumsListViewModelType <NSObject>
 
 @property (nonatomic) id <AlbumManagerType> albumManager;
@@ -20,7 +36,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface TopAlbumsListViewModel : NSObject <TopAlbumsListViewModelType, TopAlbumListViewControllerDelegate>
+@interface TopAlbumsListViewModel: NSObject <TopAlbumsListViewModelType, TopAlbumListViewControllerDelegate>
 
 @end
 

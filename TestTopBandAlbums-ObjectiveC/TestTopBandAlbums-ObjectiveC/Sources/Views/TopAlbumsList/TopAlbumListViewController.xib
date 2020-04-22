@@ -9,6 +9,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TopAlbumListViewController">
             <connections>
+                <outlet property="messageLabel" destination="cbM-es-maV" id="uTq-Wg-bEc"/>
+                <outlet property="tableView" destination="6sN-li-vWm" id="uwm-eg-UKR"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,9 +18,29 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="0.92941176469999998" green="0.41568627450000001" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbM-es-maV">
+                    <rect key="frame" x="20" y="104" width="46" height="21"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6sN-li-vWm">
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="6sN-li-vWm" secondAttribute="bottom" id="44Y-d9-KaP"/>
+                <constraint firstItem="6sN-li-vWm" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="5KO-Th-NIa"/>
+                <constraint firstItem="cbM-es-maV" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="60" id="5VV-Zd-GVh"/>
+                <constraint firstItem="6sN-li-vWm" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="cDK-H9-HOt"/>
+                <constraint firstItem="6sN-li-vWm" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="jZx-1t-mPE"/>
+                <constraint firstItem="cbM-es-maV" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="uDr-0g-IfX"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
-            <point key="canvasLocation" x="139" y="133"/>
+            <point key="canvasLocation" x="137.68115942028987" y="132.58928571428572"/>
         </view>
     </objects>
 </document>

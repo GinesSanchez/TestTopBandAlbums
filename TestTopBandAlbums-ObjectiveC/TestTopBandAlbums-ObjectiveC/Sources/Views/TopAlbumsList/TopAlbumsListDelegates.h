@@ -8,5 +8,7 @@
 
 @protocol TopAlbumListViewControllerDelegate <NSObject>
 
+-(void) viewDidLoad;
+
 @end
 

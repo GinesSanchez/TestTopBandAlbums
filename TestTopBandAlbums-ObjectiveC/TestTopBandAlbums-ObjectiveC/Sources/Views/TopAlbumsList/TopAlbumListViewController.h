@@ -12,7 +12,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TopAlbumListViewController : UIViewController
+@interface TopAlbumListViewController: UIViewController <UITableViewDataSource>
 
 @property (nonatomic) id<TopAlbumListViewControllerDelegate> viewModel;
 
