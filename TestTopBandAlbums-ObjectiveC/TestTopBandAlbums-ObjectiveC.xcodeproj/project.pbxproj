@@ -20,6 +20,7 @@
 		7508DCAA2450230C00C38529 /* Artist.m in Sources */ = {isa = PBXBuildFile; fileRef = 7508DCA92450230C00C38529 /* Artist.m */; };
 		7508DCAD2450244D00C38529 /* ImageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7508DCAC2450244D00C38529 /* ImageInfo.m */; };
 		7508DCB1245025CE00C38529 /* NSArray+ImageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7508DCB0245025CE00C38529 /* NSArray+ImageInfo.m */; };
+		7508DCB42450282900C38529 /* AlbumManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7508DCB32450282900C38529 /* AlbumManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		7508DCAC2450244D00C38529 /* ImageInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageInfo.m; sourceTree = "<group>"; };
 		7508DCAF245025CE00C38529 /* NSArray+ImageInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+ImageInfo.h"; sourceTree = "<group>"; };
 		7508DCB0245025CE00C38529 /* NSArray+ImageInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+ImageInfo.m"; sourceTree = "<group>"; };
+		7508DCB22450282900C38529 /* AlbumManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlbumManager.h; sourceTree = "<group>"; };
+		7508DCB32450282900C38529 /* AlbumManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlbumManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +190,8 @@
 			isa = PBXGroup;
 			children = (
 				7508DCA32450229F00C38529 /* Models */,
+				7508DCB22450282900C38529 /* AlbumManager.h */,
+				7508DCB32450282900C38529 /* AlbumManager.m */,
 			);
 			path = AlbumManager;
 			sourceTree = "<group>";
@@ -322,6 +327,7 @@
 				7508DCB1245025CE00C38529 /* NSArray+ImageInfo.m in Sources */,
 				7508DC7624501CFA00C38529 /* SceneDelegate.m in Sources */,
 				7508DCAA2450230C00C38529 /* Artist.m in Sources */,
+				7508DCB42450282900C38529 /* AlbumManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
