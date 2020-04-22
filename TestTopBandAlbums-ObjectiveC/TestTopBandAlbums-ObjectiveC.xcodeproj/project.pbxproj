@@ -23,6 +23,8 @@
 		7508DCB42450282900C38529 /* AlbumManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7508DCB32450282900C38529 /* AlbumManager.m */; };
 		7508DCB824502E5D00C38529 /* NetworkManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7508DCB724502E5D00C38529 /* NetworkManagerTests.m */; };
 		7508DCB924502E6200C38529 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7508DCA024501E0500C38529 /* NetworkManager.m */; };
+		7508DCBC2450383E00C38529 /* AbumManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7508DCBB2450383E00C38529 /* AbumManagerTests.m */; };
+		7508DCBD2450384300C38529 /* AlbumManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7508DCB32450282900C38529 /* AlbumManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,7 @@
 		7508DCB22450282900C38529 /* AlbumManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlbumManager.h; sourceTree = "<group>"; };
 		7508DCB32450282900C38529 /* AlbumManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlbumManager.m; sourceTree = "<group>"; };
 		7508DCB724502E5D00C38529 /* NetworkManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkManagerTests.m; sourceTree = "<group>"; };
+		7508DCBB2450383E00C38529 /* AbumManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbumManagerTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +228,7 @@
 		7508DCB524502E3900C38529 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				7508DCBA2450380C00C38529 /* AlbumManager */,
 				7508DCB624502E4400C38529 /* NetworkManager */,
 			);
 			path = Managers;
@@ -236,6 +240,14 @@
 				7508DCB724502E5D00C38529 /* NetworkManagerTests.m */,
 			);
 			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		7508DCBA2450380C00C38529 /* AlbumManager */ = {
+			isa = PBXGroup;
+			children = (
+				7508DCBB2450383E00C38529 /* AbumManagerTests.m */,
+			);
+			path = AlbumManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,9 +367,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7508DCBC2450383E00C38529 /* AbumManagerTests.m in Sources */,
 				7508DCB824502E5D00C38529 /* NetworkManagerTests.m in Sources */,
 				7508DCB924502E6200C38529 /* NetworkManager.m in Sources */,
 				7508DC8E24501CFC00C38529 /* TestTopBandAlbums_ObjectiveCTests.m in Sources */,
+				7508DCBD2450384300C38529 /* AlbumManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
