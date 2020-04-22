@@ -31,7 +31,7 @@
 
 -(void) getTopAlbumsFromBandName: (NSString *) bandName completionHandler: (albumsListResponse) completion {
     NSURL *url = [self.networkManager createURLWithSchema: @"https"
-                                                  apiHost: @"http://ws.audioscrobbler.com/"
+                                                  apiHost: @"ws.audioscrobbler.com"
                                                      path: @"/2.0/"
                                                parameters: @{
                                                    @"method": @"artist.gettopalbums",
