@@ -25,6 +25,9 @@
 		7508DCB924502E6200C38529 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7508DCA024501E0500C38529 /* NetworkManager.m */; };
 		7508DCBC2450383E00C38529 /* AbumManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7508DCBB2450383E00C38529 /* AbumManagerTests.m */; };
 		7508DCBD2450384300C38529 /* AlbumManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7508DCB32450282900C38529 /* AlbumManager.m */; };
+		7508DCCB24503FB400C38529 /* TopAlbumsListCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7508DCCA24503FB400C38529 /* TopAlbumsListCoordinator.m */; };
+		7508DCCF2450400B00C38529 /* TopAlbumListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7508DCCD2450400B00C38529 /* TopAlbumListViewController.m */; };
+		7508DCD02450400B00C38529 /* TopAlbumListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7508DCCE2450400B00C38529 /* TopAlbumListViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,12 @@
 		7508DCB32450282900C38529 /* AlbumManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlbumManager.m; sourceTree = "<group>"; };
 		7508DCB724502E5D00C38529 /* NetworkManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkManagerTests.m; sourceTree = "<group>"; };
 		7508DCBB2450383E00C38529 /* AbumManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbumManagerTests.m; sourceTree = "<group>"; };
+		7508DCC524503E6C00C38529 /* Coordinating.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Coordinating.h; sourceTree = "<group>"; };
+		7508DCC924503FB400C38529 /* TopAlbumsListCoordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TopAlbumsListCoordinator.h; sourceTree = "<group>"; };
+		7508DCCA24503FB400C38529 /* TopAlbumsListCoordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopAlbumsListCoordinator.m; sourceTree = "<group>"; };
+		7508DCCC2450400B00C38529 /* TopAlbumListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TopAlbumListViewController.h; sourceTree = "<group>"; };
+		7508DCCD2450400B00C38529 /* TopAlbumListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopAlbumListViewController.m; sourceTree = "<group>"; };
+		7508DCCE2450400B00C38529 /* TopAlbumListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopAlbumListViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +147,7 @@
 		7508DC9924501D8C00C38529 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				7508DCC424503E6100C38529 /* Protocols */,
 				7508DCAE2450258400C38529 /* Categories */,
 				7508DC9D24501DED00C38529 /* Managers */,
 				7508DC9B24501DBA00C38529 /* Views */,
@@ -160,6 +170,7 @@
 		7508DC9B24501DBA00C38529 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7508DCBE24503E3E00C38529 /* TopAlbumsList */,
 				7508DC9C24501DC000C38529 /* Default */,
 			);
 			path = Views;
@@ -250,6 +261,26 @@
 			path = AlbumManager;
 			sourceTree = "<group>";
 		};
+		7508DCBE24503E3E00C38529 /* TopAlbumsList */ = {
+			isa = PBXGroup;
+			children = (
+				7508DCC924503FB400C38529 /* TopAlbumsListCoordinator.h */,
+				7508DCCA24503FB400C38529 /* TopAlbumsListCoordinator.m */,
+				7508DCCC2450400B00C38529 /* TopAlbumListViewController.h */,
+				7508DCCD2450400B00C38529 /* TopAlbumListViewController.m */,
+				7508DCCE2450400B00C38529 /* TopAlbumListViewController.xib */,
+			);
+			path = TopAlbumsList;
+			sourceTree = "<group>";
+		};
+		7508DCC424503E6100C38529 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				7508DCC524503E6C00C38529 /* Coordinating.h */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -332,6 +363,7 @@
 			files = (
 				7508DC8124501CFB00C38529 /* LaunchScreen.storyboard in Resources */,
 				7508DC7E24501CFB00C38529 /* Assets.xcassets in Resources */,
+				7508DCD02450400B00C38529 /* TopAlbumListViewController.xib in Resources */,
 				7508DC7C24501CFA00C38529 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,6 +383,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7508DC7924501CFA00C38529 /* ViewController.m in Sources */,
+				7508DCCB24503FB400C38529 /* TopAlbumsListCoordinator.m in Sources */,
 				7508DC7324501CFA00C38529 /* AppDelegate.m in Sources */,
 				7508DC8424501CFB00C38529 /* main.m in Sources */,
 				7508DCA6245022AF00C38529 /* Album.m in Sources */,
@@ -359,6 +392,7 @@
 				7508DCB1245025CE00C38529 /* NSArray+ImageInfo.m in Sources */,
 				7508DC7624501CFA00C38529 /* SceneDelegate.m in Sources */,
 				7508DCAA2450230C00C38529 /* Artist.m in Sources */,
+				7508DCCF2450400B00C38529 /* TopAlbumListViewController.m in Sources */,
 				7508DCB42450282900C38529 /* AlbumManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
