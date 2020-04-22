@@ -22,6 +22,7 @@
             self.name = name;
             self.url = url;
             self.mbid = mbid;
+            return self;
         }
     }
 

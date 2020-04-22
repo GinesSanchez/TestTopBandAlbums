@@ -15,11 +15,12 @@
 
     if (self) {
         NSString *size = dictionary[@"size"];
-        NSURL *url = dictionary[@"url"];
+        NSURL *url = dictionary[@"#text"];
 
         if (size && url) {
             self.size = size;
             self.url = url;
+            return self;
         }
     }
 

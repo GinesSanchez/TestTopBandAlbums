@@ -21,12 +21,13 @@
         Artist *artist = [[Artist alloc] initWithDictionary: dictionary[@"artist"]];
         NSArray *imageList = [NSArray arrayWithImageInfoArray: dictionary[@"image"]];
 
-        if (name && url && mbid) {
+        if (name && url && mbid && artist && imageList) {
             self.name = name;
             self.url = url;
             self.mbid = mbid;
             self.artist = artist;
             self.imageUrls = imageList;
+            return self;
         }
     }
 
