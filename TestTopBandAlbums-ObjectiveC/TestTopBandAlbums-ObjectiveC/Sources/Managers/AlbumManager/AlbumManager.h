@@ -7,10 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NetworkManager.h"
 
 typedef void(^albumsListResponse)(NSArray * albumsList, NSError * error);
 
 @protocol AlbumManagerType <NSObject>
+
+@property (nonatomic) id <NetworkManagerType> networkManager;
 
 -(instancetype) initWithNetworkManager;
 -(void) getTopAlbumsFromBandName: (NSString *) bandName completionHandler: (albumsListResponse) completion;

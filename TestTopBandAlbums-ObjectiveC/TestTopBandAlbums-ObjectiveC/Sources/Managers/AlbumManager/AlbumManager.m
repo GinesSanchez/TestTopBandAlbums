@@ -10,13 +10,9 @@
 #import "NetworkManager.h"
 #import "Album.h"
 
-@interface AlbumManager ()
-
-@property (nonatomic) NetworkManager *networkManager;
-
-@end
-
 @implementation AlbumManager
+
+@synthesize networkManager;
 
 -(instancetype) initWithNetworkManager {
     self = [super init];
