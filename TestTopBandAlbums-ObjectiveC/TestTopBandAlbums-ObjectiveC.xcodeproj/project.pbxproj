@@ -28,6 +28,8 @@
 		7508DCCB24503FB400C38529 /* TopAlbumsListCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7508DCCA24503FB400C38529 /* TopAlbumsListCoordinator.m */; };
 		7508DCCF2450400B00C38529 /* TopAlbumListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7508DCCD2450400B00C38529 /* TopAlbumListViewController.m */; };
 		7508DCD02450400B00C38529 /* TopAlbumListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7508DCCE2450400B00C38529 /* TopAlbumListViewController.xib */; };
+		7508DCD3245044E500C38529 /* TopAlbumsListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7508DCD2245044E500C38529 /* TopAlbumsListViewModel.m */; };
+		7508DCD82450464C00C38529 /* ViewModuleFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7508DCD72450464C00C38529 /* ViewModuleFactory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,11 @@
 		7508DCCC2450400B00C38529 /* TopAlbumListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TopAlbumListViewController.h; sourceTree = "<group>"; };
 		7508DCCD2450400B00C38529 /* TopAlbumListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopAlbumListViewController.m; sourceTree = "<group>"; };
 		7508DCCE2450400B00C38529 /* TopAlbumListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopAlbumListViewController.xib; sourceTree = "<group>"; };
+		7508DCD1245044E500C38529 /* TopAlbumsListViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TopAlbumsListViewModel.h; sourceTree = "<group>"; };
+		7508DCD2245044E500C38529 /* TopAlbumsListViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopAlbumsListViewModel.m; sourceTree = "<group>"; };
+		7508DCD62450464C00C38529 /* ViewModuleFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewModuleFactory.h; sourceTree = "<group>"; };
+		7508DCD72450464C00C38529 /* ViewModuleFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewModuleFactory.m; sourceTree = "<group>"; };
+		7508DCD92450471C00C38529 /* TopAlbumsListDelegates.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TopAlbumsListDelegates.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +154,7 @@
 		7508DC9924501D8C00C38529 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				7508DCD42450462D00C38529 /* Factories */,
 				7508DCC424503E6100C38529 /* Protocols */,
 				7508DCAE2450258400C38529 /* Categories */,
 				7508DC9D24501DED00C38529 /* Managers */,
@@ -269,6 +277,9 @@
 				7508DCCC2450400B00C38529 /* TopAlbumListViewController.h */,
 				7508DCCD2450400B00C38529 /* TopAlbumListViewController.m */,
 				7508DCCE2450400B00C38529 /* TopAlbumListViewController.xib */,
+				7508DCD1245044E500C38529 /* TopAlbumsListViewModel.h */,
+				7508DCD2245044E500C38529 /* TopAlbumsListViewModel.m */,
+				7508DCD92450471C00C38529 /* TopAlbumsListDelegates.h */,
 			);
 			path = TopAlbumsList;
 			sourceTree = "<group>";
@@ -279,6 +290,15 @@
 				7508DCC524503E6C00C38529 /* Coordinating.h */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		7508DCD42450462D00C38529 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				7508DCD62450464C00C38529 /* ViewModuleFactory.h */,
+				7508DCD72450464C00C38529 /* ViewModuleFactory.m */,
+			);
+			path = Factories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -386,6 +406,7 @@
 				7508DCCB24503FB400C38529 /* TopAlbumsListCoordinator.m in Sources */,
 				7508DC7324501CFA00C38529 /* AppDelegate.m in Sources */,
 				7508DC8424501CFB00C38529 /* main.m in Sources */,
+				7508DCD3245044E500C38529 /* TopAlbumsListViewModel.m in Sources */,
 				7508DCA6245022AF00C38529 /* Album.m in Sources */,
 				7508DCA124501E0500C38529 /* NetworkManager.m in Sources */,
 				7508DCAD2450244D00C38529 /* ImageInfo.m in Sources */,
@@ -394,6 +415,7 @@
 				7508DCAA2450230C00C38529 /* Artist.m in Sources */,
 				7508DCCF2450400B00C38529 /* TopAlbumListViewController.m in Sources */,
 				7508DCB42450282900C38529 /* AlbumManager.m in Sources */,
+				7508DCD82450464C00C38529 /* ViewModuleFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

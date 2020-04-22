@@ -8,6 +8,13 @@
 
 #import "TopAlbumsListCoordinator.h"
 #import "TopAlbumListViewController.h"
+#import "ViewModuleFactory.h"
+
+@interface TopAlbumsListCoordinator ()
+
+@property (nonatomic) ViewModuleFactory *viewModuleFactory;
+
+@end
 
 @implementation TopAlbumsListCoordinator
 
@@ -19,6 +26,7 @@ TopAlbumListViewController *topAlbumListViewController;
     self = [super init];
     if (self) {
         self.navigationController = navigationController;
+        self.viewModuleFactory = [ViewModuleFactory new];
         return self;
     }
 
@@ -26,7 +34,7 @@ TopAlbumListViewController *topAlbumListViewController;
 }
 
 - (void) start {
-    topAlbumListViewController = [[TopAlbumListViewController alloc]initWithNibName: @"TopAlbumListViewController" bundle:nil];
+    topAlbumListViewController = [self.viewModuleFactory createTopAlbumListModule];
     [self.navigationController pushViewController: topAlbumListViewController animated: TRUE];
 }
 

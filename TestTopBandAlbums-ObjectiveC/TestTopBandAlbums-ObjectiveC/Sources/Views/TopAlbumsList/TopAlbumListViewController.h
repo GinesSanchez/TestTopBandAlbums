@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TopAlbumsListViewModel.h"
+#import "TopAlbumsListDelegates.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TopAlbumListViewController : UIViewController
+
+@property (nonatomic) id<TopAlbumListViewControllerDelegate> viewModel;
 
 @end
 
