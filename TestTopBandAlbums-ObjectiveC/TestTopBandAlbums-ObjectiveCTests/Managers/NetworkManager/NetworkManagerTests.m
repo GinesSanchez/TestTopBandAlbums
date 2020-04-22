@@ -7,31 +7,46 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "NetWorkManager.h"
 
-@interface NetworkManagerTests : XCTestCase
+@interface NetworkManagerTests: XCTestCase
 
 @end
 
 @implementation NetworkManagerTests
 
+NetworkManager *networkManager;
+
 - (void)setUp {
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    networkManager = [NetworkManager new];
 }
 
 - (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
+    networkManager = nil;
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+- (void)testNetworkManager_CreateURLWithoutParameters_Success {
+    NSURL *url = [networkManager createURLWithSchema: @"https"
+                                             apiHost: @"ws.audioscrobbler.com"
+                                                path: @"/2.0/"
+                                          parameters: nil];
+    XCTAssertTrue([url.absoluteString isEqualToString: @"https://ws.audioscrobbler.com/2.0/"]);
+    XCTAssertNil(url.query);
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
-}
+- (void)testNetworkManager_CreateURLWithParameters_Success {
+    NSURL *url = [networkManager createURLWithSchema: @"https"
+                                             apiHost: @"ws.audioscrobbler.com"
+                                                path: @"/2.0/"
+                                          parameters: @{
+                                              @"method": @"artist.gettopalbums",
+                                              @"artist": @"h.e.a.t",
+                                              @"api_key": @"801b215af974882c6deb0ef9325163a7",
+                                              @"format": @"json"
+                                          }];
 
+    XCTAssertTrue([url.absoluteString isEqualToString: @"https://ws.audioscrobbler.com/2.0/?format=json&method=artist.gettopalbums&api_key=801b215af974882c6deb0ef9325163a7&artist=h.e.a.t"]);
+    XCTAssertNotNil(url.query);
+    XCTAssertTrue([url.query isEqualToString: @"format=json&method=artist.gettopalbums&api_key=801b215af974882c6deb0ef9325163a7&artist=h.e.a.t"]);
+}
 @end
